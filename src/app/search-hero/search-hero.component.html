@@ -1,0 +1,3 @@
+<h4>serach</h4>
+<input type="text" (keyup)=onSearch(search.value) #search>
+<a routerLink="/detail/{{hero.id}}" *ngFor="let hero of heroes$ |async">{{hero.name}}</a>

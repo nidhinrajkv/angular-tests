@@ -1,0 +1,16 @@
+<div class="container">
+  <input type="text" placeholder="hero name" #newHero/>
+  <button class="btn btn-success" (click)="addHero(newHero.value)">Add</button>
+  <hr>
+</div>
+<ul class="list-group">
+  <div class="container">
+    <li class="list-group-item" *ngFor="let hero of heroes" style="clear:both">
+      <div class="row" routerLink="/detail/{{hero.id}}">
+          {{hero.id}}
+          {{hero.name}}
+      </div>
+      <button (click)="deleteHero(hero)">X</button>
+    </li>
+  </div>
+</ul>

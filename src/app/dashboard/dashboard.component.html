@@ -1,0 +1,10 @@
+
+<div class="card-columns">
+  <div class="card bg-light" *ngFor="let hero of heroes" routerLink="/detail/{{hero.id}}">
+    <div class="card-body text-center">
+      <p class="card-text">{{hero.name}}</p>
+    </div>
+  </div>
+</div>
+
+<app-search-hero></app-search-hero>
